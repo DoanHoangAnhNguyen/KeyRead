@@ -21,8 +21,7 @@ namespace KeyRead
 
 
         private Key pressedKey;
-        private StringBuilder c;
-        //private Label _label;
+        private StringBuilder c;        
 
         private Key[] keys = { Key.A, Key.O, Key.U, Key.S };
         private Key[] shiftKeys = { Key.LeftShift, Key.RightShift };
@@ -82,8 +81,7 @@ namespace KeyRead
             c = new StringBuilder();
             isRunning = true;
             threadModKey.Start();
-            keyThread.Start();
-            //replaceKeyThread.Start();
+            keyThread.Start();            
 
             _listener = new LowLevelKeyboardListener();
             _listener.OnKeyPressed += _listener_OnkeyPressed;
